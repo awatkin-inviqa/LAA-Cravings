@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/user/public_html/
-    - /bin/cp hiya.txt $DEPLOYPATH
+    - /bin/rsync -a --delete --exclude=".git" --exclude=".cpanel.yml" /home/adamwatk/public_html/LAA-Cravings/ $DEPLOYPATH  
+    
